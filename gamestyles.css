@@ -1,0 +1,44 @@
+body{
+    background-color: grey;
+   
+}
+
+header{
+   margin-left: auto;
+   margin-right:auto;
+ 
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size:30px;
+}
+
+ul{
+    font-size: 20px;
+}
+
+
+li{
+    padding-bottom: 5px;
+}
+
+
+.rules{
+    background-color: rgba(245, 245, 245, 0.689);
+    max-width: 800px;
+    border: 5px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+
+
+#start{
+    font-size:25px;
+    margin: 20px;
+}

@@ -1,32 +1,35 @@
 body{
-    background-color: beige;
-    border: 20px double cyan
+    margin-top: 15%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 header{
-    text-align: center;
+    text-align:center;
+    font-size: 40px;
 }
 
-li{
-    margin: 10%;
-    border: solid 1px cyan;
-    border-radius: 5px;
-    list-style: none;
-    
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.timer{
-    border: black solid 2px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    
+.nav{
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.635);
 }
 
-.quiz{
-    border: black solid 2px;
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-right:20%;
+#play:hover{
+    background-color: rgba(255, 0, 0, 0.512);
 }
 
+#score:hover{
+    background-color: rgba(255, 0, 0, 0.512);
+}
