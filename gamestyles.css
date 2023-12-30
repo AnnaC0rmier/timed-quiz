@@ -9,27 +9,24 @@ header{
  
 }
 
-h1{
-    font-size: 40px;
-}
-
-h2{
-    font-size:30px;
-}
-
 ul{
-    font-size: 20px;
+    font-size:16px;
+    padding-right: 10px
 }
-
 
 li{
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+main{
+    margin: 10%;
+    border: 2px black solid;
 }
 
 
 .rules{
-    background-color: rgba(245, 245, 245, 0.689);
-    max-width: 800px;
+    background-color: rgba(245, 245, 245, 0.484);
+    max-width: fit-content;
     border: 5px solid black;
     display:flex;
     flex-direction:column;
@@ -41,4 +38,8 @@ li{
 #start{
     font-size:25px;
     margin: 20px;
+}
+
+#start:hover {
+    background-color:rgba(255, 0, 0, 0.562);
 }
