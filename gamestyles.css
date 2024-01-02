@@ -20,7 +20,7 @@ li{
 
 main{
     margin: 10%;
-    border: 2px black solid;
+    border: 5px black solid;
 }
 
 
@@ -35,11 +35,88 @@ main{
 }
 
 
+.quiz{
+    display:none;
+    background-color: rgba(245, 245, 245, 0.484);
+    padding: 20px
+    
+}
+
+.timer{
+    /* text-align:right; */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.score{
+    
+    font-size:20px;
+    font-weight: bold;
+}
+
+ .question1{
+    display:none;
+}
+
+.question2{
+    display:none;
+}
+
+.question3{
+    display:none;
+}
+
+.question4{
+    display:none;
+}
+
+.question5{
+    display:none;
+} 
+
+/* .questions{
+    display:none;
+} */
+
+
+
+.choice{
+    display:block;
+    list-style: none;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    max-width:fit-content;
+    padding-left: 5px;
+    padding-right:5px;
+
+}
+
+.buttons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
 #start{
     font-size:25px;
     margin: 20px;
 }
 
+#exit{
+    margin: 20px;
+    font-size: 25px;
+}
+
 #start:hover {
     background-color:rgba(255, 0, 0, 0.562);
+}
+
+.choice:hover{
+    background-color: rgba(188, 185, 185, 0.562);
+}
+
+#exit:hover{
+    background-color: rgba(255, 0, 0, 0.562);
 }

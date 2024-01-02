@@ -1,58 +1,93 @@
-var quizQuestions = [
-    {
-        question: 'What does HTML stand for?',
-        choices: {
-            a: 'How to make lasanga',
-            b: 'Hyper Text Markup Language',
-            c: 'Hyper Text Markdown Language',
-            d: 'it doesnt stand for anything',
-        },
-        answer: 'b'
-    },
+document.getElementById('start').addEventListener('click', showQuestion);
+document.getElementById('start').addEventListener('click', startTimer);
 
-    {
-        question: 'What is the symbol in css used to select an element by id',
-        choices: {
-            a: '!',
-            b: '*',
-            c: '.',
-            d: '#',
-        },
-        answer: 'd'
-    },
+var secondsLeft = 300;
 
-    {
-        question: 'which answer choice does NOT represent a way to define a variable',
-        choices: {
-            a: 'assign',
-            b: 'let',
-            c: 'const',
-            d: 'var',
-        },
-        answer: 'a'
-    },
-
-    {
-        question: 'where do you link a CSS file within the HTML file',
-        choices: {
-            a: 'in the head element',
-            b: 'in the main element',
-            c: 'in a div element',
-            d: 'in the body element',
-        },
-        answer: 'a'
-    },
-
-    {
-        question: 'what is the CSS property used to change text color',
-        choices: {
-            a: 'text-color',
-            b: 'color',
-            c: 'change-text-color',
-            d: 'text',
-        },
-        answer: 'b'
-    },
+function startTimer(){
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        var timeEl = document.getElementById('time');
+        timeEl.textContent = secondsLeft + " seconds remaining";
+        
+        if(secondsLeft === 0){
+            clearInterval(timerInterval);
+            window.location.href="score.html";
+        }
+    }, 1000);
+}
 
 
-    function displayQuestion()
+const questionsContainer = document.getElementById('quiz');
+const questionIds = ['question1', 'question2', 'question3', 'question4', 'question5'];
+
+var currentQuestionIndex = 0;
+
+function showQuestion() {
+    document.getElementById('start').style.display = 'none';
+    questionsContainer.style.display = 'block';
+    showCurrentQuestion();
+}
+
+function nextQuestion() {
+    hideCurrentQuestion();
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questionIds.length) {
+        showCurrentQuestion();
+    }
+    else{
+        alert("end of quiz, please submit")
+    }
+}
+
+function showCurrentQuestion() {
+    document.getElementById(questionIds[currentQuestionIndex]).style.display = 'block';
+}
+
+function hideCurrentQuestion() {
+    document.getElementById(questionIds[currentQuestionIndex]).style.display = 'none';
+}
+
+document.getElementById('next').addEventListener('click', nextQuestion);
+
+
+var highScore = 0;
+
+document.addEventListener('click', function(event) {
+    var rightAnswer = document.querySelectorAll('[data-value="true"]');
+    var clickedElement = event.target;
+
+    if (rightAnswer.length > 0) {
+        for (var i = 0; i < rightAnswer.length; i++) {
+            if (clickedElement === rightAnswer[i] && !rightAnswer[i].dataset.clicked) {
+                rightAnswer[i].dataset.clicked = true;
+                highScore++;
+                var highScoreDisplay = document.getElementById('score');
+                if (highScoreDisplay) {
+                    highScoreDisplay.textContent = 'Score: ' + highScore;
+                }
+                 {
+                    wrongAnswer();
+                }
+              
+            }
+        }
+    }
+});
+
+document.addEventListener('click', function(event) {
+    var wrongAnswerElements = document.querySelectorAll('[data-value="false"]');
+    var wrongClickedElement = event.target;
+
+    if (wrongAnswerElements.length > 0) {
+        for (var i = 0; i < wrongAnswerElements.length; i++) {
+            if (wrongClickedElement === wrongAnswerElements[i]) {
+                alert('Wrong answer, 30s deducted');
+                {
+                    secondsLeft= secondsLeft - 30
+                }
+            }
+        }
+    }
+});
+
