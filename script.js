@@ -36,7 +36,7 @@ function nextQuestion() {
         showCurrentQuestion();
     }
     else{
-        alert("end of quiz, please submit")
+        alert('quiz over! please submit')
     }
 }
 
@@ -65,11 +65,10 @@ document.addEventListener('click', function(event) {
                 var highScoreDisplay = document.getElementById('score');
                 if (highScoreDisplay) {
                     highScoreDisplay.textContent = 'Score: ' + highScore;
+                    console.log("High Score to be stored:", highScore);
+                    localStorage.setItem('highScore', JSON.stringify(highScore));
+
                 }
-                 {
-                    wrongAnswer();
-                }
-              
             }
         }
     }
@@ -83,11 +82,8 @@ document.addEventListener('click', function(event) {
         for (var i = 0; i < wrongAnswerElements.length; i++) {
             if (wrongClickedElement === wrongAnswerElements[i]) {
                 alert('Wrong answer, 30s deducted');
-                {
-                    secondsLeft= secondsLeft - 30
-                }
+                secondsLeft = secondsLeft - 30;
             }
         }
     }
 });
-

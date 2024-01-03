@@ -38,12 +38,11 @@ main{
 .quiz{
     display:none;
     background-color: rgba(245, 245, 245, 0.484);
-    padding: 20px
+    padding: 20px;
     
 }
 
 .timer{
-    /* text-align:right; */
     font-weight: bold;
     font-size: 20px;
 }
@@ -54,30 +53,9 @@ main{
     font-weight: bold;
 }
 
- .question1{
+ .question1, .question2, .question3, .question4, .question5{
     display:none;
 }
-
-.question2{
-    display:none;
-}
-
-.question3{
-    display:none;
-}
-
-.question4{
-    display:none;
-}
-
-.question5{
-    display:none;
-} 
-
-/* .questions{
-    display:none;
-} */
-
 
 
 .choice{
@@ -94,8 +72,7 @@ main{
 .buttons{
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 
 
@@ -118,5 +95,14 @@ main{
 }
 
 #exit:hover{
+    background-color: rgba(255, 0, 0, 0.562);
+}
+
+
+[data-value|='true']:focus{
+    background-color: rgba(0, 128, 0, 0.729);
+}
+
+[data-value|='false']:focus{
     background-color: rgba(255, 0, 0, 0.562);
 }
