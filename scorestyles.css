@@ -3,6 +3,38 @@ body{
 }
 
 h1{
+    font-size: 75px;;
     text-align: center;
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#score{
+    border: 5px solid black;
+    padding: 20px;
+    display: flex;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 50px;
+    font-weight:bold;
+    background-color:  rgba(245, 245, 245, 0.484);
+}
+
+#home{
+
+    margin: 10%;
+    font-size: 25px;
+}
+
+#home:hover{
+    background-color: rgba(255, 0, 0, 0.562);
 }
 

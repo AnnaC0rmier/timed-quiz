@@ -2,6 +2,8 @@ document.getElementById('start').addEventListener('click', showQuestion);
 document.getElementById('start').addEventListener('click', startTimer);
 
 var secondsLeft = 300;
+var highScoreArray = [];
+
 
 function startTimer(){
     var timerInterval = setInterval(function(){
@@ -87,3 +89,4 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
