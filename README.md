@@ -9,6 +9,12 @@ The features of this quiz include a home page which gives the option to play the
 questions that are scored. When the user gets a question right, they are awarded a point. If they are wrong, they get 30 seconds deducted from their time. I then utalized local storage to 
 let the user save their most recent high score!
 
+
+## Check out the deployed webpage
+
+[The Java Script Quiz!](https://annac0rmier.github.io/timed-quiz/)
+
+
 ## Technology Used
 
 In this project I utalized Html 5, Css, and Vanilla Javascript
@@ -20,6 +26,3 @@ In this project I utalized Html 5, Css, and Vanilla Javascript
 ![annac0rmier github io_timed-quiz_game html](https://github.com/AnnaC0rmier/timed-quiz/assets/149715329/1800ff6e-24ed-420e-8739-708f341437c9)
 
 
-## Check out the deployed webpage
-
-[The Java Script Quiz!](https://annac0rmier.github.io/timed-quiz/)
